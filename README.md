@@ -6,9 +6,63 @@
 **questao 5**
 **questao 6**
 **questao 7**
+
+package org.example;
+import java.util.Scanner;
+public class Media {
+
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+            // Entrada dos valores
+            System.out.print("Digite a nota P1: ");
+            double P1 = sc.nextDouble();
+
+            System.out.print("Digite a nota E1: ");
+            double E1 = sc.nextDouble();
+
+            System.out.print("Digite a nota E2: ");
+            double E2 = sc.nextDouble();
+
+            System.out.print("Digite o valor de X: ");
+            double X = sc.nextDouble();
+
+            System.out.print("Digite a nota SUB: ");
+            double SUB = sc.nextDouble();
+
+            System.out.print("Digite a nota API: ");
+            double API = sc.nextDouble();
+
+            // Cálculo da base
+            double base = (P1 * 0.5) + (E1 * 0.2) + (E2 * 0.3) + X + (SUB * 0.15);
+
+            // Primeiro termo
+            double termo1 = base * 0.5;
+
+            // Numerador e denominador do segundo termo
+            double numerador = Math.max(base - 5.9, 0);
+            double denominador = base - 5.9;
+
+            double termo2 = 0;
+            if (denominador != 0) {
+                termo2 = (numerador / denominador) * API * 0.5;
+            }
+
+            // Resultado final
+            double media = termo1 + termo2;
+
+            // Saída
+            System.out.println("A média final é: " + media);
+
+            sc.close();
+        }
+    }
+
 **questao 8**
 
 código quest.2
+
+
 package org.example;
 
 public class Coracao {
