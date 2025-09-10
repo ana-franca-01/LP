@@ -1,0 +1,258 @@
+código quest.3 IMG_1
+
+package org.example;
+
+public class Jornal {
+    private String titulo;
+    private int paginas;
+    private boolean idioma;
+
+    public Jornal(String titulo, int paginas, boolean idioma) {
+        this.titulo = titulo;
+        this.paginas = paginas;
+        this.idioma = idioma;
+
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public int getPaginas() {
+        return paginas;
+    }
+    public void setPaginas(int paginas) {
+        this.paginas = paginas;
+    }
+    public boolean isIdioma() {
+        return idioma;
+    }
+    public void setIdioma(boolean idioma) {
+        this.idioma = idioma;
+    }
+
+    public void informarNoticia() {
+        System.out.println("Notícia informada pelo jornal: " + titulo);
+    }
+
+}
+
+
+package org.example;
+
+public class Barco {
+    private String material;
+    private String tamanho;
+    private int passageiros;
+
+    public Barco(String material, String tamanho, int passageiros) {
+        this.material = material;
+        this.tamanho = tamanho;
+        this.passageiros = passageiros;
+    }
+    public String getMaterial() {
+        return material;
+    }
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+    public String getTamanho() {
+        return tamanho;
+    }
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
+    }
+    public int getPassageiros() {
+        return passageiros;
+    }
+    public void setPassageiros(int passageiros) {
+        this.passageiros = passageiros;
+    }
+
+    public void navegar() {
+        System.out.println("O barco de " + material + " e tamanho " + tamanho +
+                " está navegando com " + passageiros + " passageiros.");
+    }
+}
+
+
+package org.example;
+
+public class Mar {
+    private String cor;
+    private int ondas;
+    private int profundidade;
+
+    public Mar(String cor, int ondas, int profundidade) {
+        this.cor = cor;
+        this.ondas = ondas;
+        this.profundidade = profundidade;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    public int getOndas() {
+        return ondas;
+    }
+    public void setOndas(int ondas) {
+        this.ondas = ondas;
+    }
+    public int getProfundidade() {
+        return profundidade;
+    }
+    public void setProfundidade(int profundidade) {
+        this.profundidade = profundidade;
+    }
+
+    public void agitar() {
+        System.out.println("O mar de cor " + cor + " está se agitando com "
+                + ondas + " ondas e profundidade de "
+                + profundidade + " metros!");
+    }
+
+}
+
+
+
+código quest.3 IMG_2
+
+
+package org.example;
+
+public class Cafe {
+    private int quantidade;
+    private String tipo;
+    private boolean torrado;
+
+    public Cafe(int quantidade, String tipo, boolean torrado) {
+        this.quantidade = quantidade;
+        this.tipo = tipo;
+        this.torrado = torrado;
+    }
+    public int getQuantidade() {
+        return quantidade;
+    }
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+    public String getTipo() {
+        return tipo;
+    }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    public boolean isTorrado() {
+        return torrado;
+    }
+    public void setTorrado(boolean torrado) {
+        this.torrado = torrado;
+    }
+    public void preparar() {
+        String estado = torrado ? "torrado" : "não torrado";
+        System.out.println("Preparando " + quantidade + "ml de café " + tipo + " (" + estado + ").");
+    }
+
+}
+
+
+package org.example;
+
+public class Xicara {
+    private String material;
+    private String cor;
+    private int capacidade;
+
+    public Xicara(String material, String cor, int capacidade) {
+        this.material = material;
+        this.cor = cor;
+        this.capacidade = capacidade;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+    public String getCor() {
+        return cor;
+    }
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    public int getCapacidade() {
+        return capacidade;
+    }
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+    // Método servirCafe
+    public void servirCafe(Cafe c) {
+        if (c.getQuantidade() <= capacidade) {
+            System.out.println("Servindo " + c.getQuantidade() + "ml de café " + c.getTipo() +
+                    " na xícara de " + material + " (" + cor + ").");
+        } else {
+            System.out.println("A xícara não suporta " + c.getQuantidade() + "ml! Capacidade máxima: "
+                    + capacidade + "ml.");
+        }
+    }
+
+
+}
+
+
+
+package org.example;
+
+public class Pessoa {
+    private String nome;
+    private int idade;
+    private boolean gostaDeCafe;
+
+    public Pessoa(String nome, int idade, boolean gostaDeCafe) {
+        this.nome = nome;
+        this.idade = idade;
+        this.gostaDeCafe = gostaDeCafe;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public int getIdade() {
+        return idade;
+    }
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    public boolean isGostaDeCafe() {
+        return gostaDeCafe;
+    }
+    public void setGostaDeCafe(boolean gostaDeCafe) {
+        this.gostaDeCafe = gostaDeCafe;
+    }
+    public void beberCafe(Xicara x, Cafe c) {
+        if (!gostaDeCafe) {
+            System.out.println(nome + " não gosta de café. ☹️");
+            return;
+        }
+
+        if (c.getQuantidade() <= 0) {
+            System.out.println("Não há café disponível para " + nome + ".");
+            return;
+        }
+
+        if (c.getQuantidade() > x.getCapacidade()) {
+            System.out.println(nome + " não conseguiu beber porque a xícara é pequena demais.");
+        } else {
+            System.out.println(nome + " está bebendo " + c.getQuantidade() + "ml de café "
+                    + c.getTipo() + " na xícara de " + x.getMaterial() + " (" + x.getCor() + "). ☕");
+        }
+    }
+}
