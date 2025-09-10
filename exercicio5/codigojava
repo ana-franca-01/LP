@@ -1,0 +1,126 @@
+package org.example;
+
+public class Robo {
+    private int energia;
+    private String nome;
+    private String modelo;
+
+    public Humano(int energia, String nome, String modelo) {
+        this.energia = energia;
+        this.nome = nome;
+        this.modelo = modelo;
+    }
+    public int getEnergia() {
+        return energia;
+    }
+    public void setEnergia(int energia) {
+        this.energia = energia;
+    }
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getModelo() {
+        return modelo;
+    }
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void mover() {
+        if (energia <= 0) {
+            System.out.println(nome + " está sem energia e não consegue se mover. ❌");
+            return;
+        }
+
+        energia -= 10; // cada movimento consome energia
+        System.out.println(nome + " se moveu! Energia restante: " + energia + "% ⚡");
+    }
+}
+
+
+package org.example;
+
+public class Humano {
+    private String nome;
+    private int idade;
+    private int peso;
+
+    public Humano(String nome, int idade, int peso) {
+        this.nome = nome;
+        this.idade = idade;
+        this.peso = peso;
+
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public int getIdade() {
+        return idade;
+    }
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    public int getPeso() {
+        return peso;
+    }
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public void falar() {
+        System.out.println("Olá, meu nome é " + nome + " e tenho " + idade + " anos.");
+    }
+
+
+
+}
+
+
+
+package org.example;
+
+public class Planta {
+    private String cor;
+    private String tipo;
+    private int altura;
+
+    public Planta(String cor, String tipo, int altura) {
+        this.cor = cor;
+        this.tipo = tipo;
+        this.altura = altura;
+    }
+    public String getCor() {
+        return cor;
+    }
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    public String getTipo() {
+        return tipo;
+
+    }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    public int getAltura() {
+        return altura;
+    }
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+    public void fotossintese() {
+        System.out.println("A planta de cor " + cor + " está realizando fotossíntese.");
+    }
+
+}
+
+
+
