@@ -1,0 +1,123 @@
+package org.example;
+
+public class Planeta {
+    private String nome;
+    private String tipo;
+    private int idade;
+
+    public Planeta(String nome, String tipo, int idade) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.idade = idade;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getTipo() {
+        return tipo;
+    }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    public int getIdade() {
+        return idade;
+    }
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    public void girar() {
+        System.out.println("O planeta " + nome + " do tipo " + tipo +
+                " está girando em seu eixo. 🌍✨ Idade: " + idade + " bilhões de anos.");
+    }
+    
+}
+
+
+package org.example;
+
+public class NaveEspacial {
+    private String modelo;
+    private String cor;
+    private int capacidade;
+
+    public NaveEspacial(String modelo, String cor, int capacidade) {
+        this.modelo = modelo;
+        this.cor = cor;
+        this.capacidade = capacidade;
+    }
+    public String getModelo() {
+        return modelo;
+    }
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+    public String getCor() {
+        return cor;
+    }
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    public int getCapacidade() {
+        return capacidade;
+    }
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+    public void decolar() {
+        System.out.println("A nave espacial modelo " + modelo + " de cor " + cor +
+                " está decolando com capacidade para " + capacidade + " tripulantes! 🚀");
+    }
+
+}
+
+package org.example;
+
+public class Astronauta {
+    private int nivelOxigenio;
+    private String nome;
+    private int posicao;
+
+    public Astronauta(int nivelOxigenio, String nome,  int posicao) {
+        this.nivelOxigenio = nivelOxigenio;
+        this.nome = nome;
+        this.posicao = posicao;
+    }
+    public int getNivelOxigenio() {
+        return nivelOxigenio;
+    }
+    public void setNivelOxigenio(int nivelOxigenio) {
+        this.nivelOxigenio = nivelOxigenio;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public int getPosicao() {
+        return posicao;
+    }
+    public void setPosicao(int posicao) {
+        this.posicao = posicao;
+    }
+    public void explorar() {
+        if (nivelOxigenio <= 0) {
+            System.out.println(nome + " não pode explorar, está sem oxigênio! ❌");
+            return;
+        }
+
+        posicao += 10; // anda 10 "unidades"
+        nivelOxigenio -= 5; // perde 5 de oxigênio
+
+        System.out.println(nome + " explorou o espaço! 🚀");
+        System.out.println("Posição atual: " + posicao + " | Nível de oxigênio: " + nivelOxigenio + "%");
+    }
+
+
+}
+
+
+
