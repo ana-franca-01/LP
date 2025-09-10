@@ -1,0 +1,242 @@
+código quest.2
+
+
+package org.example;
+
+public class Coracao {
+    private int intensidadeSentimento;
+    private boolean ferido;
+    private boolean desejaAmor;
+
+    public Coracao(int intensidadeSentimento, boolean ferido) {
+        this.intensidadeSentimento = intensidadeSentimento;
+        this.ferido = ferido;
+        this.desejaAmor = false;
+    }
+
+    public int getIntensidadeSentimento() {
+        return intensidadeSentimento;
+    }
+    public void setIntensidadeSentimento(int intensidadeSentimento) {
+        this.intensidadeSentimento = intensidadeSentimento;
+    }
+
+    public boolean isFerido() {
+        return ferido;
+
+    }
+    public void setFerido(boolean ferido) {
+        this.ferido = ferido;
+    }
+
+    public boolean isDesejaAmor() {
+        return desejaAmor;
+    }
+
+    public void setDesejaAmor(boolean desejaAmor) {
+        this.desejaAmor = desejaAmor;
+    }
+
+    public void bater{
+        System.out.println("O coração bate masi forte");
+    }
+
+package org.example;
+
+public class Palavra {
+    private String texto;
+    private boolean verdadeiro;
+    private int repetida;
+
+    public Palavra(String texto, boolean verdadeiro, int repetida) {
+        this.tetxo = texto;
+        this.verdadeiro = verdadeiro;
+        this.repetida = repetida;
+    }
+    public String getTexto() {
+        return texto;
+    }
+    public void setTexto(String texto) {
+        this.tetxo = texto;
+    }
+    public boolean isVerdadeiro() {
+        return verdadeiro;
+    }
+    public void setVerdadeiro(boolean verdadeiro) {
+        this.verdadeiro = verdadeiro;
+    }
+    public int getRepetida() {
+        return repetida;
+    }
+
+    public void setRepetida(int repetida) {
+        this.repetida = repetida;
+    }
+
+    public void dizer{
+        System.out.println("palavra dita" + texto);
+    }
+}
+
+
+package org.example;
+
+public class Mentira {
+    private String palavras;
+    private int itesnsidade;
+    private boolean descoberta;
+
+    public Mentira(String palavras, int itesnsidade,  boolean descoberta) {
+        this.palavras = palavras;
+        this.itesnsidade = itesnsidade;
+        this.descoberta = false;
+    }
+    public String getPalavras() {
+        return palavras;
+    }
+    public void setPalavras(String palavras) {
+        this.palavras = palavras;
+    }
+    public int getItesnsidade() {
+        return itesnsidade;
+    }
+    public void setItesnsidade(int itesnsidade) {
+        this.itesnsidade = itesnsidade;
+    }
+    public boolean isDescoberta() {
+        return descoberta;
+    }
+    public void setDescoberta(boolean descoberta) {
+        this.descoberta = descoberta;
+    }
+    public String esconderVerdade() {
+        if (!descoberta) {
+            return "A mentira esconde a verdade dizendo: " + palavras;
+        } else {
+            return "A verdade veio à tona. A mentira foi descoberta!";
+        }
+    }
+
+}
+}
+
+
+código quest.3 IMG_1
+
+package org.example;
+
+public class Jornal {
+    private String titulo;
+    private int paginas;
+    private boolean idioma;
+
+    public Jornal(String titulo, int paginas, boolean idioma) {
+        this.titulo = titulo;
+        this.paginas = paginas;
+        this.idioma = idioma;
+
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public int getPaginas() {
+        return paginas;
+    }
+    public void setPaginas(int paginas) {
+        this.paginas = paginas;
+    }
+    public boolean isIdioma() {
+        return idioma;
+    }
+    public void setIdioma(boolean idioma) {
+        this.idioma = idioma;
+    }
+
+    public void informarNoticia() {
+        System.out.println("Notícia informada pelo jornal: " + titulo);
+    }
+
+}
+
+
+package org.example;
+
+public class Barco {
+    private String material;
+    private String tamanho;
+    private int passageiros;
+
+    public Barco(String material, String tamanho, int passageiros) {
+        this.material = material;
+        this.tamanho = tamanho;
+        this.passageiros = passageiros;
+    }
+    public String getMaterial() {
+        return material;
+    }
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+    public String getTamanho() {
+        return tamanho;
+    }
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
+    }
+    public int getPassageiros() {
+        return passageiros;
+    }
+    public void setPassageiros(int passageiros) {
+        this.passageiros = passageiros;
+    }
+
+    public void navegar() {
+        System.out.println("O barco de " + material + " e tamanho " + tamanho +
+                " está navegando com " + passageiros + " passageiros.");
+    }
+}
+
+
+package org.example;
+
+public class Mar {
+    private String cor;
+    private int ondas;
+    private int profundidade;
+
+    public Mar(String cor, int ondas, int profundidade) {
+        this.cor = cor;
+        this.ondas = ondas;
+        this.profundidade = profundidade;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    public int getOndas() {
+        return ondas;
+    }
+    public void setOndas(int ondas) {
+        this.ondas = ondas;
+    }
+    public int getProfundidade() {
+        return profundidade;
+    }
+    public void setProfundidade(int profundidade) {
+        this.profundidade = profundidade;
+    }
+
+    public void agitar() {
+        System.out.println("O mar de cor " + cor + " está se agitando com "
+                + ondas + " ondas e profundidade de "
+                + profundidade + " metros!");
+    }
+
+}
+
